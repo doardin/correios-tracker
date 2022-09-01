@@ -1,0 +1,11 @@
+spring:
+    web-client:
+        request:
+            timeout: 120000
+services:
+    correios:
+        url: https://proxyapp.correios.com.br/v1/sro-rastro/
+    twilio:
+        account-sid: AC3d84e1eba036fe7f133e0287501b648b
+        auth-token: 91934c4bbc4a259d695430b82b8ab3b8
+        from: whatsapp:+14155238886
