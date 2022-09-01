@@ -27,7 +27,7 @@ public class TrackerApplicationService {
 
             if(dto != null){
                 template = String.format(
-                    "🧐 Código de rastreio: %s \n🤨 Status: %s \n📍 Unidade: %s \n🕒 Data e Hora: %s", 
+                    "ℹ️ Código de rastreio: %s \n🤨 Status: %s \n📍 Unidade: %s \n🕒 Data e Hora: %s", 
                         correiosDto.getCodObjeto(), 
                         dto.getDescricao(),
                         dto.getUnidade().getEndereco().getCidade(),
