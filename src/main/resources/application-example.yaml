@@ -1,0 +1,11 @@
+spring:
+    web-client:
+        request:
+            timeout: 0
+services:
+    correios:
+        url: 
+    twilio:
+        account-sid: 
+        auth-token: 
+        from: 

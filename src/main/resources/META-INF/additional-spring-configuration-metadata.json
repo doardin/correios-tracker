@@ -1,0 +1,24 @@
+{
+    "properties": [
+        {
+            "name": "spring.web-client.request.timeout",
+            "type": "java.lang.Long",
+            "description": "Web Client request timeout configuration"
+        },
+        {
+            "name": "services",
+            "type": "java.lang.String",
+            "description": "Services configuration"
+        },
+        {
+            "name": "services.correios",
+            "type": "java.lang.String",
+            "description": "Correios configuration"
+        },
+        {
+            "name": "services.twilio",
+            "type": "java.lang.String",
+            "description": "Twilio configuration"
+        }
+    ]
+}
