@@ -3,8 +3,8 @@ package br.com.correiostracker.infrastructure.correios;
 import org.springframework.stereotype.Service;
 
 import br.com.correiostracker.config.properties.CorreiosProperties;
-import br.com.correiostracker.infrastructure.HttpWebClientRequesterService;
 import br.com.correiostracker.infrastructure.correios.dto.ResponseCorreiosDto;
+import br.com.correiostracker.infrastructure.general.HttpWebClientRequesterService;
 import lombok.RequiredArgsConstructor;
 
 @Service
