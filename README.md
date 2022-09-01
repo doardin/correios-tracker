@@ -9,6 +9,7 @@ Rest API para consulta de pacotes dos correios através do Whatsapp
 - Spring Boot
 - SDK do Twilio
 - Web Client
+- Heroku (CI)
 
 
 ## Funcionalidades
