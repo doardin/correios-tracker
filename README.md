@@ -19,8 +19,6 @@ Rest API para consulta de pacotes dos correios através do Whatsapp
 
 <div align="center">
   <img src="https://github.com/doardin/correios-tracker/blob/master/screenshots/success.jpeg" height="600px"/>
-</div>
-<div align="center">
   <img src="https://github.com/doardin/correios-tracker/blob/master/screenshots/error.jpeg" height="600px"/>
 </div>
 
