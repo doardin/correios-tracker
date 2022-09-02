@@ -33,8 +33,9 @@ public class TrackerApplicationService {
                         correiosDto.getCodObjeto(), 
                         dto.getDescricao(),
                         dto.getUnidade().getEndereco().getCidade(),
-                        dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("dd/MM/yyyy às HH:mm:ss"))
-                );
+                        String.format("%s ás %s", 
+                            dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
+                            dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("HH:mm:ss"))));
             }
         }
 
