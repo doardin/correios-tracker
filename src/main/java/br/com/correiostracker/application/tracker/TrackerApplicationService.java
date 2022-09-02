@@ -1,5 +1,7 @@
 package br.com.correiostracker.application.tracker;
 
+import java.time.format.DateTimeFormatter;
+
 import org.springframework.stereotype.Service;
 
 import br.com.correiostracker.application.twilio.TwilioMessageAppService;
@@ -31,7 +33,7 @@ public class TrackerApplicationService {
                         correiosDto.getCodObjeto(), 
                         dto.getDescricao(),
                         dto.getUnidade().getEndereco().getCidade(),
-                        dto.getDtHrCriado()
+                        dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("dd/MM/yyyy às HH:mm:ss"))
                 );
             }
         }
