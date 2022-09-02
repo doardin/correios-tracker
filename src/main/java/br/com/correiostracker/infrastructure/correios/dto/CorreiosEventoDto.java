@@ -11,5 +11,6 @@ public class CorreiosEventoDto {
     private LocalDateTime dtHrCriado;
     private String tipo;
     private CorreiosUnidadeDto unidade;
+    private CorreiosUnidadeDto unidadeDestino;
     private String urlIcone;
 }

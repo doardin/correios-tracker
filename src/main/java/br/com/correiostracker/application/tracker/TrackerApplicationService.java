@@ -32,7 +32,7 @@ public class TrackerApplicationService {
                     "ℹ️ Código de rastreio: %s \n🤨 Status: %s \n📍 Unidade: %s \n🕒 Data e Hora: %s", 
                         correiosDto.getCodObjeto(), 
                         dto.getDescricao(),
-                        dto.getUnidade().getEndereco().getCidade(),
+                        dto.getUnidade().getEndereco().getCidade() != null ? dto.getUnidade().getEndereco().getCidade() : dto.getUnidade().getNome(),
                         String.format("%s às %s", 
                             dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
                             dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("HH:mm:ss"))));
