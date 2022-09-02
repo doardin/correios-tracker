@@ -28,14 +28,18 @@ public class TrackerApplicationService {
             CorreiosEventoDto dto = correiosDto.getEventos().stream().findFirst().orElse(null);
 
             if(dto != null){
-                template = String.format(
-                    "ℹ️ Código de rastreio: %s \n🤨 Status: %s \n📍 Unidade: %s \n🕒 Data e Hora: %s", 
-                        correiosDto.getCodObjeto(), 
-                        dto.getDescricao(),
-                        dto.getUnidade().getEndereco().getCidade() != null ? dto.getUnidade().getEndereco().getCidade() : dto.getUnidade().getNome(),
-                        String.format("%s às %s", 
-                            dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
-                            dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("HH:mm:ss"))));
+                String codeText = String.format("ℹ️ Código de rastreio: %s", correiosDto.getCodObjeto());
+                String statusText = String.format("\n🤨 Status: %s", dto.getDescricao());
+                String placeText = String.format("\n📍 Unidade: %s", dto.getUnidade().getEndereco().getCidade() != null ? dto.getUnidade().getEndereco().getCidade() : dto.getUnidade().getNome());
+                String dateTimeText = String.format("\n🕒 Data e Hora: %s",  String.format("%s às %s", 
+                    dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")),
+                    dto.getDtHrCriado().format(DateTimeFormatter.ofPattern("HH:mm:ss"))));
+
+                if(dto.getUnidadeDestino() != null){
+                    placeText += String.format(" para %s", dto.getUnidadeDestino().getEndereco().getCidade() != null ? dto.getUnidadeDestino().getEndereco().getCidade() : dto.getUnidadeDestino().getNome());
+                }
+
+                template = String.format("%s %s %s %s", codeText, statusText, placeText, dateTimeText);
             }
         }
 
